@@ -52,15 +52,37 @@ char* gametrical(char* word, char* text){
     
         }
     
-
+char* atbash(char* w){
+    char ans[strlen(w)];
+    for (int i = 0; i < strlen(w); i++){
+        char ch = w[i];
+        char ch2 = ch;
+        if ((ch>='a' && ch<='n')){
+            ch2 = 'z' - (ch-'a');
+        }
+        else if(ch>='A' && ch<='N'){
+            ch2 = 'Z' - (ch-'A');
+        }
+        else if(ch>='o' && ch<='z'){
+            ch2 = 'a' + (ch-'z');
+        }
+       else if(ch>='O' && ch<='Z'){
+            ch2 = 'A' + (ch-'Z');
+        }
+        ans[i] = ch2;
+    }
+    printf("%s", ans);
+}
 
 
 int main(int argc, char const *argv[])
 {
-    int a = gametric("ab-cd,");
-    printf("%d",a);
+    char* ans = atbash("abc");
+    printf("%s" ,ans);
+    //int a = gametric("ab-cd,");
+    //printf("%d",a);
     // char * ans = gametrical("abcd","abcd");
 //    printf("%s" ,ans);
-gametrical("abcd","abcd");
-    return 0;
+//gametrical("abcd","abcd");
+  //  return 0;
 }
