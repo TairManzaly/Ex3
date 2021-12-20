@@ -25,43 +25,33 @@ int gametric(char* w){
 }
 
 
-char* gametrical(char* text){
-    char* ans;
-    char* check;
+char* gametrical(char* word, char* text){
+    char ans[TXT];
+    char check[TXT];
+
     int sum = 0;
     for (int i = 0; i < strlen(text); i++)
     {
-     char ch = w[i];
+     char ch = text[i];
+     if (gametric(check) == gametric(word))
+     {
+          strcat(ans,check);
+     }
+    else if (gametric(check) > gametric(word))
 
-    if (ch >= 'A' && ch <= 'Z')
     {
-        sum += ch - 'A' + 1;
+        for (int i = 0; i < strlen(check); i++)
+        {
+            check[i] = '0';
+        }
+         
     }
-    else if (ch >= 'a' && ch <= 'z')
-    {
-        sum += ch - 'a' + 1;
+  
     }
-
-    if (/* condition */)
-    {
-        /* code */
-    }
+    printf("%s", ans);
     
-    
-
-
-
         }
     
-
-
-}
-
-
-
-
-
-
 
 
 
@@ -69,5 +59,8 @@ int main(int argc, char const *argv[])
 {
     int a = gametric("ab-cd,");
     printf("%d",a);
+    // char * ans = gametrical("abcd","abcd");
+//    printf("%s" ,ans);
+gametrical("abcd","abcd");
     return 0;
 }
