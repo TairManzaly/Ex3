@@ -273,7 +273,6 @@ void Q2(char *w, char *t)
         }
     }
 }
-
 int main()
 {
 
