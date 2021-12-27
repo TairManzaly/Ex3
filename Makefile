@@ -7,5 +7,5 @@ all: stringProg
 
 stringProg: string.o
 	gcc $(CFLAGS) -o stringProg string.o
-main.o: string.c
+string.o: string.c
 	gcc $(CFLAGS) -c string.c
